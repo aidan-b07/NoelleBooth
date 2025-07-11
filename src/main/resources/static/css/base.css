@@ -1,3 +1,38 @@
-body {
+:root {
+    --primary-colour: rgba(16, 147, 145, 1);
+    --secondary-colour: rgba(209, 128, 56, 1);
+    --highlight-colour: rgba(167, 241, 205, 1);
+    --accent-colour: rgba(84, 79, 78, 1);
+    --line-colour: rgba(227, 227, 227, 1);
+}
+
+body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
+    color: var(--line-colour);
+}
+
+* {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    letter-spacing: 3px;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.75rem;
+}
+h4 {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+p {
+    font-size: 0.8rem;
 }
