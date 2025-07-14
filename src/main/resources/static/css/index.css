@@ -10,27 +10,6 @@
 
 }
 
-#top-bar {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px var(--accent-colour) solid;
-}
-#top-bar > #links {
-    position: relative;
-    width: 60%;
-    height: min-content;
-    display: flex;
-    justify-content: space-evenly;
-}
-#top-bar > #links > h4 {
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
 #headers {
     position: absolute;
     width: 500px;
@@ -42,11 +21,11 @@
     clip-path: inset(0 100% 0 0);
 }
 #headers > h1 {
-    color: var(--highlight-colour);
+    color: var(--secondary-colour);
     animation: sweep forwards 1s;
 }
 #headers > h3 {
-    color: var(--highlight-colour);
+    color: var(--secondary-colour);
     animation: sweep forwards 1s .5s;
 }
 #scroll-text {
@@ -65,14 +44,8 @@
 
     margin-top: 20px;
 
-    background-color: var(--secondary-colour);
-    border: var(--primary-colour) 1px solid;
-    border-radius: 5px;
-
     clip-path: inset(0 0 100% 0);
     animation: sweep forwards 1s 2s;
-
-    cursor: pointer;
 }
 #contact-btn > * {
     text-transform: uppercase;

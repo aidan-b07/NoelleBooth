@@ -10,4 +10,9 @@ public class Index {
     public String getIndex() {
         return "index";
     }
+
+    @GetMapping(value = "/contact")
+    public String getContact() {
+        return "contact";
+    }
 }

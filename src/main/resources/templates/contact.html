@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Noelle Booth Physcotherapy - Contact</title>
+
+    <link rel="stylesheet" th:href="@{/css/base.css}">
+    <link rel="stylesheet" th:href="@{/css/contact.css}">
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap"></script>
+    <script th:src="@{/js/maps.js}"></script>
+</head>
+<body>
+    <div id="top-bar">
+        <div id="links">
+            <a href="/"><h4>Home</h4></a>
+            <a href="/about"><h4>About</h4></a>
+            <a href="/services"><h4>Services</h4></a>
+            <a href="/contact"><h4 class="selected-page">Contact</h4></a>
+            <a href="/supervision"><h4>Supervision</h4></a>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="contact-header">
+            <div class="line"></div>
+            <h1>Contact</h1>
+            <div class="line"></div>
+        </div>
+
+        <div id="contact-form-wrapper">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, praesentium tempora. Asperiores corporis dolor error id neque odio ratione sapiente?</p>
+            <form id="contact-form">
+                <label>
+                    <input type="text" name="name" placeholder="Name"></label>
+                <label>
+                    <input type="email" name="email" placeholder="E-mail">
+                </label>
+                <label>
+                    <textarea id="message-box" maxlength="1500" rows="10" placeholder="Message" draggable="false" ></textarea>
+                </label>
+
+                <div>
+                    <span>Send me a copy</span>
+
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="cc" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <label>
+                    <input type="submit" class="button">
+                </label>
+            </form>
+        </div>
+        <div id="location-wrapper">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci commodi consequuntur earum iusto officia quaerat!</p>
+            <div id="map"></div>
+        </div>
+    </div>
+</body>
+</html>
