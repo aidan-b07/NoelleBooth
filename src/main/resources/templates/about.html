@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Noelle Booth Physco - About</title>
+
+    <link rel="stylesheet" th:href="@{/css/base.css}">
+    <link rel="stylesheet" th:href="@{/css/about.css}">
+</head>
+<body>
+    <div th:replace="fragments :: #top-bar('about')"></div>
+
+    <div id="content">
+        <div th:replace="fragments :: header(${title})"></div>
+        <div id="picture-wrapper" class="wrapper">
+            <div></div>
+        </div>
+        <div id="text-box-1" class="wrapper">
+            <h4 th:text="${header1}">Qualifications</h4>
+            <p th:text="${text1}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur dolor earum et laudantium magnam molestiae nam natus nemo nulla, odio provident quas reiciendis repellat soluta sunt vero voluptate voluptates.</p>
+        </div>
+        <div id="text-box-2" class="wrapper">
+            <h4 th:text="${header2}">Yip Yap</h4>
+            <p th:text="${text2}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad delectus eum hic id libero minus nihil quas, saepe sit totam. Ad architecto autem impedit ipsum libero maxime nam nesciunt praesentium.</p>
+        </div>
+        <div id="text-box-3" class="wrapper">
+            <h4 th:text="${header3}">Yiddle diddle hada yada</h4>
+            <p th:text="${text3}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam cumque exercitationem laboriosam optio quibusdam quo ratione sapiente tempore voluptatem? Aliquam aspernatur cupiditate, eaque, et exercitationem illo ipsa nulla officia provident quidem ratione recusandae, sed tempora! Aliquam assumenda doloremque, ex libero maxime nam nostrum, obcaecati, pariatur provident quisquam reprehenderit rerum sequi vitae voluptas voluptates. Debitis dicta perspiciatis placeat sequi. Est!</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -12,6 +12,16 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(auth -> auth
                         .anyRequest().permitAll()
+                )
+                .csrf(csrf -> csrf
+                        .ignoringRequestMatchers("/h2-console/**")
+                )
+                .headers(headers -> headers
+                        .frameOptions(frame -> frame.disable())
+                )
+                .formLogin(form -> form
+                        .loginPage("/login") // Optional: use default login page if not defined
+                        .permitAll()
                 );
 
         return http.build();

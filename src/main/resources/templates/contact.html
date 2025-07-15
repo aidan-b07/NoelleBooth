@@ -14,10 +14,10 @@
     <div th:replace="~{fragments :: #top-bar('contact')}"></div>
 
     <div id="content">
-        <div th:replace="~{fragments :: header(CONTACT)}"></div>
+        <div th:replace="~{fragments :: header(${title})}"></div>
 
         <div id="contact-form-wrapper">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, praesentium tempora. Asperiores corporis dolor error id neque odio ratione sapiente?</p>
+            <p th:text="${text1}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, praesentium tempora. Asperiores corporis dolor error id neque odio ratione sapiente?</p>
             <form id="contact-form">
                 <label>
                     <input type="text" name="name" placeholder="Name"></label>
@@ -42,7 +42,7 @@
             </form>
         </div>
         <div id="location-wrapper">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci commodi consequuntur earum iusto officia quaerat!</p>
+            <p th:text="text2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci commodi consequuntur earum iusto officia quaerat!</p>
             <div id="map"></div>
         </div>
     </div>

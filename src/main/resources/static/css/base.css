@@ -6,6 +6,7 @@
     --highlight-colour-hover: rgba(233, 160, 100, 0.85);
     --accent-colour: rgba(84, 79, 78, 1);
     --line-colour: rgba(227, 227, 227, 1);
+    --background-colour: rgba(204, 204, 204, .45)
 }
 
 body {
