@@ -14,15 +14,7 @@
 </head>
 <body>
     <div id="background">
-        <div id="top-bar">
-            <div id="links">
-                <a href="/"><h4 class="selected-page">Home</h4></a>
-                <a href="/about"><h4>About</h4></a>
-                <a href="/services"><h4>Services</h4></a>
-                <a href="/contact"><h4>Contact</h4></a>
-                <a href="/supervision"><h4>Supervision</h4></a>
-            </div>
-        </div>
+        <div th:replace="fragments :: #top-bar('home')"></div>
 
 
         <div id="headers">

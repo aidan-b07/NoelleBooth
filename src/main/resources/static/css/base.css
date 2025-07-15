@@ -3,6 +3,7 @@
     --secondary-colour: rgb(102, 225, 221);
     --secondary-colour-rgb: 92, 202, 199;
     --highlight-colour: rgba(209, 128, 56, 1);
+    --highlight-colour-hover: rgba(233, 160, 100, 0.85);
     --accent-colour: rgba(84, 79, 78, 1);
     --line-colour: rgba(227, 227, 227, 1);
 }
@@ -82,4 +83,56 @@ p {
     border-radius: 5px;
 
     cursor: pointer;
+}
+
+#content {
+    width: 80%;
+    height: calc(100% - 120px); /* Top bar is 60px with margin */
+    align-self: center;
+}
+
+#header {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: min-content;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: var(--accent-colour);
+}
+
+#contact-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 160px;
+    height: 40px;
+
+    margin-top: 10px;
+
+    clip-path: inset(0 0 100% 0);
+    animation: sweep forwards 1s 2s;
+}
+#contact-btn:hover {
+    background-color: var(--highlight-colour-hover);
+}
+#contact-btn > * {
+    text-transform: uppercase;
+}
+@keyframes sweep {
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+@keyframes scroll {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

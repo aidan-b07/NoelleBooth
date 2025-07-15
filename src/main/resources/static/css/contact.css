@@ -1,31 +1,17 @@
 #content {
-
-    width: 80%;
-    height: 100%;
-    align-self: center;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
-    grid-gap: 20px;
+    grid-column-gap: 20px;
     padding: 5px;
-}
-
-#content > #contact-header {
-    grid-column: 1 / 3;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-#contact-header .line {
-    flex-grow: 1;
-    height: 2px;
-    background-color: var(--accent-colour);
 }
 
 #content p {
     margin-bottom: 25px;
+}
+
+#header {
+    grid-column: 1 / 3;
 }
 
 #contact-form-wrapper {

@@ -15,4 +15,9 @@ public class Index {
     public String getContact() {
         return "contact";
     }
+
+    @GetMapping(value = "/services")
+    public String getServices() {
+        return "services";
+    }
 }

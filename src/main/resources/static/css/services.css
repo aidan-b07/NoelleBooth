@@ -1,0 +1,27 @@
+#content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: min-content auto;
+    grid-column-gap: 80px;
+    height: calc(100% - 500px);
+}
+.service-img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    background-color: black;
+}
+.service-text {
+    text-align: center;
+    margin-top: 15px;
+}
+#header {
+    grid-column: 1 / 4;
+}
+#footer {
+    margin-top: 40px;
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}

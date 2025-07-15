@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Noelle Booth Pscyotherapy - Services</title>
+
+    <link rel="stylesheet" th:href="@{/css/base.css}">
+    <link rel="stylesheet" th:href="@{/css/services.css}">
+</head>
+<body>
+    <div th:replace="fragments :: #top-bar('services')"></div>
+
+    <div id="content">
+        <div th:replace="fragments :: header(SERVICES)"></div>
+
+        <div>
+            <div class="service-img"></div>
+            <p class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque excepturi ipsum iure iusto libero minima molestias rerum voluptatibus. Debitis, sint!</p>
+        </div>
+        <div>
+            <div class="service-img"></div>
+            <p class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque excepturi ipsum iure iusto libero minima molestias rerum voluptatibus. Debitis, sint!</p>
+        </div>
+        <div>
+            <div class="service-img"></div>
+            <p class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque excepturi ipsum iure iusto libero minima molestias rerum voluptatibus. Debitis, sint!</p>
+        </div>
+
+        <div id="footer">
+            <span>Unsure of which service will suit you best?</span>
+            <a href="/contact">
+                <div id="contact-btn" class="button">
+                    <h4>Contact</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

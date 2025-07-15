@@ -34,30 +34,3 @@
     animation: scroll forwards 1s 1s;
     opacity: 0;
 }
-#contact-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 160px;
-    height: 40px;
-
-    margin-top: 20px;
-
-    clip-path: inset(0 0 100% 0);
-    animation: sweep forwards 1s 2s;
-}
-#contact-btn > * {
-    text-transform: uppercase;
-}
-@keyframes sweep {
-    to {
-        clip-path: inset(0 0 0 0);
-    }
-}
-@keyframes scroll {
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
