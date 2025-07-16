@@ -1,0 +1,67 @@
+.editable-h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+}
+.editable-h2 {
+    font-size: 2rem;
+}
+.editable-h3 {
+    font-size: 1.75rem;
+}
+.editable-h4 {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+.editable-p {
+    font-size: 0.8rem;
+    width: 100%;
+    height: 100%;
+}
+
+.editable-h1, .editable-h2, .editable-h3, .editable-h4, .editable-p {
+    margin: 0;
+    color: var(--line-colour);
+    background: none;
+    border: none;
+}
+
+#save-btn {
+    position: fixed;
+
+    width: 100px;
+    height: 50px;
+
+    left: calc(100% - 120px);
+    top: calc(100% - 70px);
+}
+#edit-text {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+#edit-text > * {
+    text-align: center;
+    color: red;
+    -webkit-text-stroke: 1px red;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+#save-success > h1 {
+    color: #0eef0e;
+    text-align: center;
+}
+#save-fail > h1 {
+    color: red;
+    text-align: center;
+}

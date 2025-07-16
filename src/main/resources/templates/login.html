@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Noelle Booth - Login</title>
+
+  <link rel="stylesheet" th:href="@{/css/base.css}">
+  <link rel="stylesheet" th:href="@{/css/login.css}">
+
+    <script th:src="@{/js/login.js}"></script>
+</head>
+<body>
+    <div id="content">
+        <h1>Noelle Booth Psychotherapy</h1>
+
+        <div id="login-wrapper">
+            <h2>Login</h2>
+            <form th:action="@{/login}" method="post" id="login-form">
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="password" placeholder="Password">
+                <button type="submit">Login</button>
+            </form>
+
+            <p id="password-reset">Forgot your password?</p>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

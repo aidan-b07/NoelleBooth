@@ -1,9 +1,9 @@
-package me.aidanbooth.noellebooth.data;
+package me.aidanbooth.noellebooth.data.pagecontent;
 
-import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -53,5 +53,20 @@ public class PageContentService {
         }
 
         return map;
+    }
+
+    public void saveAll(PageType type, Map<String, String> map) {
+        List<PageContent> contents = new ArrayList<>();
+
+        for(String s : map.keySet()) {
+            if(s.equals("page")) continue;
+
+            PageContent content = new PageContent(type, s, map.get(s));
+            contents.add(content);
+
+            pageContentRepo.deleteByPageNameAndSectionKey(type, s);
+        }
+
+        pageContentRepo.saveAll(contents);
     }
 }

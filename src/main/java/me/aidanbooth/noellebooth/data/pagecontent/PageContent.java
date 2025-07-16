@@ -1,4 +1,4 @@
-package me.aidanbooth.noellebooth.data;
+package me.aidanbooth.noellebooth.data.pagecontent;
 
 import jakarta.persistence.*;
 import lombok.Getter;

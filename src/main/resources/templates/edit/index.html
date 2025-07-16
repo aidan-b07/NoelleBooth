@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Noelle Booth Physcotherapy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chiron+Hei+HK:ital,wght@0,200..900;1,200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" th:href="@{/css/base.css}">
+    <link rel="stylesheet" th:href="@{/css/edit.css}">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+
+    <script th:src="@{/js/edit.js}"></script>
+</head>
+<body>
+<div id="background">
+    <div th:replace="~{fragments :: top-bar('home')}"></div>
+
+
+    <div id="headers">
+        <input id="title" class="editable-h1" type="text" placeholder="Title" th:value="${title}"></input>
+        <input id="subtitle" class="editable-h3" type="text" placeholder="Subtitle" th:value="${subtitle}"></input>
+        <textarea id="text" class="editable-p" th:text="${text}" placeholder="Text"></textarea>
+        <a href="/contact">
+            <div id="contact-btn" class="button">
+                <h4>Contact</h4>
+            </div>
+        </a>
+    </div>
+
+    <div class="button" id="save-btn"><h4>Save</h4></div>
+    <div id="edit-text">
+        <h4>YOU ARE IN EDIT MODE</h4>
+        <p>IF ANYTHING FORMATS FUNNY IT WILL PROBABLY BE FINE IN THE MAIN PAGE - IF NOT CONTACT AIDAN BOOTH</p>
+    </div>
+    <div class="popup" id="save-success"><h1>Save successful!</h1></div>
+    <div class="popup" id="save-fail"><h1>There was an error while saving :(</h1></div>
+</div>
+</body>
+</html>

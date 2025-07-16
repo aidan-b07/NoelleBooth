@@ -5,7 +5,7 @@
     --highlight-colour: rgba(209, 128, 56, 1);
     --highlight-colour-hover: rgba(233, 160, 100, 0.85);
     --accent-colour: rgba(84, 79, 78, 1);
-    --line-colour: rgba(227, 227, 227, 1);
+    --line-colour: rgb(244, 244, 244);
     --background-colour: rgba(204, 204, 204, .45)
 }
 
@@ -46,7 +46,10 @@ h1, h2, h3, h4, h5, h6, p {
     color: var(--accent-colour);
 }
 a {
+    display: inherit;
     text-decoration: none;
+    width: min-content;
+    height: min-content;
 }
 .selected-page {
     font-weight: 425;
@@ -84,6 +87,13 @@ p {
     border-radius: 5px;
 
     cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button > * {
+    text-transform: uppercase;
 }
 
 #content {
@@ -108,10 +118,6 @@ p {
 }
 
 #contact-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     width: 160px;
     height: 40px;
 
@@ -122,9 +128,6 @@ p {
 }
 #contact-btn:hover {
     background-color: var(--highlight-colour-hover);
-}
-#contact-btn > * {
-    text-transform: uppercase;
 }
 @keyframes sweep {
     to {

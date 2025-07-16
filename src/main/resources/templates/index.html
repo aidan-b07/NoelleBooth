@@ -14,8 +14,7 @@
 </head>
 <body>
     <div id="background">
-        <div th:replace="fragments :: #top-bar('home')"></div>
-
+        <div th:replace="~{fragments :: top-bar('home')}"></div>
 
         <div id="headers">
             <h1 class="sweep-hidden" th:text="${title}">Noelle Booth</h1>
