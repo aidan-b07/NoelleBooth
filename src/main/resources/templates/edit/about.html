@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Noelle Booth Physco - About</title>
+
+    <meta name="csrf-token" th:content="${_csrf.getToken()}">
+    <meta name="csrf-header" th:content="${_csrf.getHeaderName()}">
+
+    <link rel="stylesheet" th:href="@{/css/base.css}">
+    <link rel="stylesheet" th:href="@{/css/about.css}">
+    <link rel="stylesheet" th:href="@{/css/edit.css}">
+</head>
+<body>
+<div th:replace="fragments :: top-bar-edit('about')"></div>
+
+<div id="content">
+    <div th:replace="fragments :: header(${title})"></div>
+    <div id="picture-wrapper" class="wrapper">
+        <div></div>
+    </div>
+    <div id="text-box-1" class="wrapper">
+        <input id="header1" class="editable-h4" type="text" placeholder="Header 1" th:value="${header1}">
+        <textarea id="text1" class="editable-p" type="text" placeholder="Text box 1" th:text="${text1}"></textarea>
+    </div>
+    <div id="text-box-2" class="wrapper">
+        <input id="header2" class="editable-h4" type="text" placeholder="Header 2" th:value="${header2}">
+        <textarea id="text2" class="editable-p" type="text" placeholder="Text box 2" th:text="${text2}"></textarea>
+    </div>
+    <div id="text-box-3" class="wrapper">
+        <input id="header3" class="editable-h4" type="text" placeholder="Header 3" th:value="${header3}">
+        <textarea id="text3" class="editable-p" type="text" placeholder="Text box 3" th:text="${text3}"></textarea>
+    </div>
+
+    <div th:replace="~{fragments :: edit-utils}"></div>
+</div>
+</body>
+<script>const page = 'about';</script>
+<script th:src="@{/js/edit.js}"></script>
+</html>

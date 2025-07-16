@@ -1,19 +1,22 @@
 :root {
-    --primary-colour: rgba(16, 147, 145, 1);
-    --secondary-colour: rgb(102, 225, 221);
+    --primary-colour: rgba(16, 147, 145, 0.45);
+    --secondary-colour: rgba(16, 147, 145, 1);
+
     --secondary-colour-rgb: 92, 202, 199;
     --highlight-colour: rgba(209, 128, 56, 1);
+    --highlight-colour-2: rgb(251, 137, 21);
     --highlight-colour-hover: rgba(233, 160, 100, 0.85);
     --accent-colour: rgba(84, 79, 78, 1);
     --line-colour: rgb(244, 244, 244);
-    --background-colour: rgba(204, 204, 204, .45)
+    --background-colour: rgba(16, 147, 145, 0.25);
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     margin: 0;
-    background: radial-gradient(var(--secondary-colour), var(--primary-colour));
+    /* background: radial-gradient(var(--secondary-colour), var(--primary-colour)); */
+    background: var(--background-colour);
     display: flex;
     flex-direction: column;
 }
@@ -43,7 +46,10 @@ h1, h2, h3, h4, h5, h6, p {
 #top-bar h4 {
     text-transform: uppercase;
     cursor: pointer;
-    color: var(--accent-colour);
+    transition: letter-spacing 0.3s ease-in-out;
+}
+#top-bar h4:hover {
+    letter-spacing: 5px;
 }
 a {
     display: inherit;
@@ -98,8 +104,22 @@ p {
 
 #content {
     width: 80%;
-    height: calc(100% - 120px); /* Top bar is 60px with margin */
+    height: calc(100vh - 100px); /* Top bar is 60px with margin */
+    overflow-y: auto;
     align-self: center;
+    background-color: var(--primary-colour);
+
+
+}
+#content::-webkit-scrollbar {
+    width: 6px;
+}
+#content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+#content::-webkit-scrollbar-track {
+    background: var(--primary-colour);
 }
 
 #header {
@@ -110,11 +130,24 @@ p {
     height: min-content;
     margin-top: 30px;
     margin-bottom: 40px;
+
+}
+#header h1 {
+    color: var(--highlight-colour-2);
+    animation: letter-spacing 1.75s forwards ease-in-out;
+    letter-spacing: 4px;
 }
 .line {
     flex-grow: 1;
     height: 2px;
     background-color: var(--accent-colour);
+    animation: letter-spacing 1.75s forwards ease-in-out;
+}
+@keyframes letter-spacing {
+    from {
+        letter-spacing: 20px;
+        opacity: 0;
+    }
 }
 
 #contact-btn {

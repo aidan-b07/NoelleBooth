@@ -6,18 +6,22 @@
 
     <link rel="stylesheet" th:href="@{/css/base.css}">
     <link rel="stylesheet" th:href="@{/css/contact.css}">
+    <link rel="stylesheet" th:href="@{/css/edit.css}">
+
+    <meta name="csrf-token" th:content="${_csrf.getToken()}">
+    <meta name="csrf-header" th:content="${_csrf.getHeaderName()}">
 
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap"></script>
     <script th:src="@{/js/maps.js}"></script>
 </head>
 <body>
-    <div th:replace="~{fragments :: top-bar('contact')}"></div>
+    <div th:replace="~{fragments :: top-bar-edit('contact')}"></div>
 
     <div id="content">
         <div th:replace="~{fragments :: header(${title})}"></div>
 
         <div id="contact-form-wrapper">
-            <p th:text="${text1}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, praesentium tempora. Asperiores corporis dolor error id neque odio ratione sapiente?</p>
+            <textarea id="text1" class="editable-p" placeholder="Text box 1" th:text="${text1}"></textarea>
             <form id="contact-form">
                 <label>
                     <input type="text" name="name" placeholder="Name"></label>
@@ -37,14 +41,18 @@
                     </label>
                 </div>
                 <label>
-                    <input type="submit" class="button">
+                    <input type="button" class="button">
                 </label>
             </form>
         </div>
         <div id="location-wrapper">
-            <p th:text="${text2}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci commodi consequuntur earum iusto officia quaerat!</p>
+            <textarea id="text2" class="editable-p" placeholder="Text box 2" th:text="${text2}"></textarea>
             <div id="map"></div>
         </div>
     </div>
+
+    <div th:replace="~{fragments :: edit-utils}"></div>
 </body>
+<script>const page = 'contact';</script>
+<script th:src="@{/js/edit.js}"></script>
 </html>

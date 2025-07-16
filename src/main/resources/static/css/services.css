@@ -3,12 +3,23 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: min-content auto;
     grid-column-gap: 80px;
-    height: calc(100% - 500px);
+    padding: 5px;
 }
 .service-img {
     width: 100%;
     aspect-ratio: 3 / 2;
-    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#service-img-1 {
+    background-image: url("/images/service1.jpeg");
+}
+#service-img-2 {
+    background-image: url("/images/service2.png");
+}
+#service-img-3 {
+    background-image: url("/images/service3.jpg");
 }
 .service-text {
     text-align: center;

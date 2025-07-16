@@ -20,8 +20,6 @@ import org.springframework.security.web.servlet.util.matcher.PathPatternRequestM
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
-    @Autowired
-    private CustomUserDetailsService userDetailsService;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {

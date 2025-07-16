@@ -17,15 +17,12 @@ public class Index {
         return "login";
     }
 
-
-
     @GetMapping(value = "")
     public String getIndex(Model model) {
         model.addAllAttributes(pageContentService.getContentAttributes(PageType.HOME));
 
         return "index";
     }
-
     @GetMapping(value = "/edit/home")
     public String getEditHome(Model model) {
         model.addAllAttributes(pageContentService.getContentAttributes(PageType.HOME));
@@ -39,12 +36,24 @@ public class Index {
 
         return "contact";
     }
+    @GetMapping(value = "/edit/contact")
+    public String getContactEdit(Model model) {
+        model.addAllAttributes(pageContentService.getContentAttributes(PageType.CONTACT));
+
+        return "edit/contact";
+    }
 
     @GetMapping(value = "/services")
     public String getServices(Model model) {
         model.addAllAttributes(pageContentService.getContentAttributes(PageType.SERVICES));
 
         return "services";
+    }
+    @GetMapping(value = "/edit/services")
+    public String getServicesEdit(Model model) {
+        model.addAllAttributes(pageContentService.getContentAttributes(PageType.SERVICES));
+
+        return "edit/services";
     }
 
     @GetMapping(value = "/about")
@@ -53,4 +62,11 @@ public class Index {
 
         return "about";
     }
+    @GetMapping(value = "/edit/about")
+    public String getAboutEdit(Model model) {
+        model.addAllAttributes(pageContentService.getContentAttributes(PageType.ABOUT));
+
+        return "edit/about";
+    }
+
 }

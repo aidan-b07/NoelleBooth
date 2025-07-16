@@ -16,10 +16,22 @@ public class Edit {
     private PageContentService pageContentService;
 
     @PostMapping(value = "/edit/update-content", consumes = "application/json")
-    public ResponseEntity<String> save(@RequestBody Map<String, String> map) {
-        PageType type = PageType.valueOf(map.get("page"));
-        pageContentService.saveAll(type, map);
-        System.out.println("ALL DONE");
-        return ResponseEntity.ok("Saved successfully");
+    public ResponseEntity<Map<String, String>> save(@RequestBody Map<String, String> map) {
+        try {
+            PageType type = PageType.valueOf(map.get("page").toUpperCase());
+            pageContentService.saveAll(type, map);
+
+            return ResponseEntity.ok(Map.of(
+                    "status", "success",
+                    "message", "Saved successfully"
+            ));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.badRequest().body(Map.of(
+                    "status", "error",
+                    "message", e.getMessage() != null ? e.getMessage() : "An unexpected error occurred"
+            ));
+        }
     }
+
 }

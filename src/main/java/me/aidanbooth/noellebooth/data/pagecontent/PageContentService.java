@@ -2,6 +2,7 @@ package me.aidanbooth.noellebooth.data.pagecontent;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -55,6 +56,7 @@ public class PageContentService {
         return map;
     }
 
+    @Transactional
     public void saveAll(PageType type, Map<String, String> map) {
         List<PageContent> contents = new ArrayList<>();
 

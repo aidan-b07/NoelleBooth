@@ -14,6 +14,25 @@
         </div>
     </div>
 
+    <div id="top-bar" th:fragment="top-bar-edit(selectedPage)">
+        <div id="links">
+            <a href="/edit/home"><h4 th:classappend="${selectedPage == 'home'} ? ' selected-page'">Home</h4></a>
+            <a href="/edit/about"><h4 th:classappend="${selectedPage == 'about'} ? ' selected-page'">About</h4></a>
+            <a href="/edit/services"><h4 th:classappend="${selectedPage == 'services'} ? ' selected-page'">Services</h4></a>
+            <a href="/edit/contact"><h4 th:classappend="${selectedPage == 'contact'} ? ' selected-page'">Contact</h4></a>
+        </div>
+    </div>
+
+    <div id="edit-utils" th:fragment="edit-utils">
+        <div class="button" id="save-btn"><h4>Save</h4></div>
+        <div id="edit-text">
+            <h4>YOU ARE IN EDIT MODE</h4>
+            <p>IF ANYTHING FORMATS FUNNY IT WILL PROBABLY BE FINE IN THE MAIN PAGE - IF NOT CONTACT AIDAN BOOTH</p>
+        </div>
+        <div class="popup" id="save-success"><h1>Save successful!</h1></div>
+        <div class="popup" id="save-fail"><h1>There was an error while saving :(</h1></div>
+    </div>
+
     <div id="header" th:fragment="header(text)">
         <div class="line"></div>
         <h1 th:text="${text}"></h1>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" th:href="@{/css/about.css}">
 </head>
 <body>
-    <div th:replace="fragments :: #top-bar('about')"></div>
+    <div th:replace="~{fragments :: top-bar('about')}"></div>
 
     <div id="content">
         <div th:replace="fragments :: header(${title})"></div>
