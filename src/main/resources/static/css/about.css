@@ -12,7 +12,6 @@
 .wrapper {
     height: calc(100% - 10px);
     width: calc(100% - 10px);
-    background-color: var(--background-colour);
     padding: 5px;
 }
 .wrapper > h4 {

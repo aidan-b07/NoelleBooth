@@ -1,3 +1,11 @@
+/*
+    Content to 100% width + fix padding
+    Fix homepage image
+    Contact form
+    Maps
+
+ */
+
 :root {
     --primary-colour: rgba(16, 147, 145, 0.45);
     --secondary-colour: rgba(16, 147, 145, 1);
@@ -22,18 +30,19 @@ body {
 }
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
-    color: var(--line-colour);
+    color: black;
 }
 
 #top-bar {
     display: flex;
     width: 100%;
-    height: 60px;
+    height: 50px;
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 10px;
 
-    background: linear-gradient(to bottom, var(--secondary-colour) 83%, rgba(var(--secondary-colour-rgb), 0));
+    box-shadow: 0 0 10px 0 black;
+    background: var(--secondary-colour);
 }
 #top-bar > #links {
     position: relative;
@@ -47,6 +56,7 @@ h1, h2, h3, h4, h5, h6, p {
     text-transform: uppercase;
     cursor: pointer;
     transition: letter-spacing 0.3s ease-in-out;
+    color: white;
 }
 #top-bar h4:hover {
     letter-spacing: 5px;
@@ -64,7 +74,7 @@ a {
 * {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 200;
+    font-weight: 300;
     font-style: normal;
     letter-spacing: 3px;
 }
@@ -100,16 +110,13 @@ p {
 }
 .button > * {
     text-transform: uppercase;
+    color: white;
 }
 
 #content {
     width: 80%;
-    height: calc(100vh - 100px); /* Top bar is 60px with margin */
-    overflow-y: auto;
+    height: auto; /* Top bar is 60px with margin */
     align-self: center;
-    background-color: var(--primary-colour);
-
-
 }
 #content::-webkit-scrollbar {
     width: 6px;

@@ -17,4 +17,9 @@ public class AppUserService {
         String encodedPassword = passwordEncoder.encode(rawPassword);
         userRepository.save(new AppUser(username, encodedPassword, role));
     }
+
+    public void createDefaults() {
+        createUser("aidan", "VVC@9IdxJF$d^7an", "ADMIN");
+        createUser("noelle", "8LjshltuMegt$3Wr", "MODERATOR");
+    }
 }
