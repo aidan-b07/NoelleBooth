@@ -3,6 +3,7 @@ package me.aidanbooth.noellebooth.security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
@@ -27,7 +28,9 @@ public class SecurityConfig {
 			.authorizeHttpRequests((requests) -> requests
                 .requestMatchers("/login", "/", "/about", "/contact", "/services", "/css/**", "/js/login.js", "/js/maps.js", "/images/**").permitAll()
                     .requestMatchers("/h2-console/**").hasRole("ADMIN")
+                    .requestMatchers(HttpMethod.POST, "/contact").permitAll()
                 .anyRequest().authenticated())
+
 
                 .formLogin((form) -> form
                         .loginPage("/login")
@@ -35,7 +38,10 @@ public class SecurityConfig {
                         .permitAll()
                 )
                 .logout((logout) -> logout.permitAll())
-                .csrf((csrf) -> csrf.ignoringRequestMatchers(PathPatternRequestMatcher.withDefaults().matcher("/h2-console/**")))
+                .csrf(csrf -> csrf.ignoringRequestMatchers(
+                        PathPatternRequestMatcher.withDefaults().matcher("/h2-console/**"),
+                        PathPatternRequestMatcher.withDefaults().matcher("/contact")
+                ))
                 .headers(headers -> headers.frameOptions(frame -> frame.disable()));
 
         return http.build();

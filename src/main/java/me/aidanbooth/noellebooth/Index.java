@@ -1,5 +1,6 @@
 package me.aidanbooth.noellebooth;
 
+import me.aidanbooth.noellebooth.data.dtos.ContactDTO;
 import me.aidanbooth.noellebooth.data.pagecontent.PageContentService;
 import me.aidanbooth.noellebooth.data.pagecontent.PageType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,7 @@ public class Index {
     @GetMapping(value = "/contact")
     public String getContact(Model model) {
         model.addAllAttributes(pageContentService.getContentAttributes(PageType.CONTACT));
+        model.addAttribute("ContactDTO", new ContactDTO());
 
         return "contact";
     }

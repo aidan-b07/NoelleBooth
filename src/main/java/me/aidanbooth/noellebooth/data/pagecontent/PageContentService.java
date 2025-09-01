@@ -19,7 +19,7 @@ public class PageContentService {
         pageContentRepo.save(newContent);
     }
 
-    private void createDefaults() {
+    public void createDefaults() {
         createPageContent(PageType.HOME, "title", "Noelle Booth");
         createPageContent(PageType.HOME, "subtitle", "Physcotherapy");
         createPageContent(PageType.HOME, "text", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A commodi error exercitationem fugit officia provident quaerat qui quidem quod, velit! Ab corporis, delectus dolorem ducimus, error ipsa iste iure labore perferendis quasi ratione ut? Maiores!");

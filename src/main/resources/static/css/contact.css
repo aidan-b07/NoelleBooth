@@ -99,4 +99,41 @@
     background-color: var(--accent-colour);
 }
 
+#success {
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #359835;
 
+    animation: fadeOut 1s 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #content {
+        grid-template-columns: 1fr;   /* single column */
+        grid-template-rows: auto;     /* auto height */
+    }
+
+    #header {
+        grid-column: 1;
+    }
+
+    #contact-form-wrapper,
+    #location-wrapper {
+        grid-column: 1;
+        grid-row: auto;  /* just stack */
+    }
+
+    #location-wrapper {
+        grid-row: 2;
+        margin-bottom: 50px;
+    }
+}

@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noelle Booth Psychotherapy - Contact</title>
 
     <link rel="stylesheet" th:href="@{/css/base.css}">
@@ -16,23 +17,25 @@
     <div id="content">
         <div th:replace="~{fragments :: header(${title})}"></div>
 
+        <h4 id="success" th:if="${param.success}">Form sent successfully!</h4>
+
         <div id="contact-form-wrapper">
             <p th:text="${text1}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, praesentium tempora. Asperiores corporis dolor error id neque odio ratione sapiente?</p>
-            <form id="contact-form">
+            <form id="contact-form" action="/contact?success=true" th:action="@{/contact}" th:object="${ContactDTO}" method="post">
                 <label>
-                    <input type="text" name="name" placeholder="Name"></label>
+                    <input type="text" name="name" th:field="*{name}" placeholder="Name"></label>
                 <label>
-                    <input type="email" name="email" placeholder="E-mail">
+                    <input type="email" name="email" th:field="*{email}" placeholder="E-mail">
                 </label>
                 <label>
-                    <textarea id="message-box" maxlength="1500" rows="10" placeholder="Message" draggable="false" ></textarea>
+                    <textarea id="message-box" th:field="*{message}" maxlength="1500" rows="10" placeholder="Message" draggable="false" ></textarea>
                 </label>
 
                 <div>
                     <span>Send me a copy</span>
 
                     <label class="checkbox-container">
-                        <input type="checkbox" name="cc" checked="checked">
+                        <input type="checkbox" name="cc" checked="checked" th:field="*{sendCopy}">
                         <span class="checkmark"></span>
                     </label>
                 </div>

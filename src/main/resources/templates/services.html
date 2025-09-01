@@ -13,17 +13,19 @@
     <div id="content">
         <div th:replace="fragments :: header(${title})"></div>
 
-        <div>
-            <div class="service-img" id="service-img-1"></div>
-            <p class="service-text" th:text="${text1}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque excepturi ipsum iure iusto libero minima molestias rerum voluptatibus. Debitis, sint!</p>
-        </div>
-        <div>
-            <div class="service-img" id="service-img-2"></div>
-            <p class="service-text" th:text="${text2}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque excepturi ipsum iure iusto libero minima molestias rerum voluptatibus. Debitis, sint!</p>
-        </div>
-        <div>
-            <div class="service-img" id="service-img-3"></div>
-            <p class="service-text" th:text="${text3}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque excepturi ipsum iure iusto libero minima molestias rerum voluptatibus. Debitis, sint!</p>
+        <div id="service-wrapper">
+            <div>
+                <div class="service-img" id="service-img-1"></div>
+                <p class="service-text" th:text="${text1}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque excepturi ipsum iure iusto libero minima molestias rerum voluptatibus. Debitis, sint!</p>
+            </div>
+            <div>
+                <div class="service-img" id="service-img-2"></div>
+                <p class="service-text" th:text="${text2}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque excepturi ipsum iure iusto libero minima molestias rerum voluptatibus. Debitis, sint!</p>
+            </div>
+            <div>
+                <div class="service-img" id="service-img-3"></div>
+                <p class="service-text" th:text="${text3}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque excepturi ipsum iure iusto libero minima molestias rerum voluptatibus. Debitis, sint!</p>
+            </div>
         </div>
 
         <div id="footer">

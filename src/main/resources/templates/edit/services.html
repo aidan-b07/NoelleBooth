@@ -17,17 +17,19 @@
 <div id="content">
     <div th:replace="~{fragments :: header(${title})}"></div>
 
-    <div>
-        <div class="service-img" id="service-img-1"></div>
-        <textarea id="text1" class="service-text editable-p" th:text="${text1}"></textarea>
-    </div>
-    <div>
-        <div class="service-img" id="service-img-2"></div>
-        <textarea id="text2" class="service-text editable-p" th:text="${text2}"></textarea>
-    </div>
-    <div>
-        <div class="service-img" id="service-img-3"></div>
-        <textarea id="text3" class="service-text editable-p" th:text="${text3}"></textarea>
+    <div id="service-wrapper">
+        <div>
+            <div class="service-img" id="service-img-1"></div>
+            <textarea id="text1" class="service-text editable-p" th:text="${text1}"></textarea>
+        </div>
+        <div>
+            <div class="service-img" id="service-img-2"></div>
+            <textarea id="text2" class="service-text editable-p" th:text="${text2}"></textarea>
+        </div>
+        <div>
+            <div class="service-img" id="service-img-3"></div>
+            <textarea id="text3" class="service-text editable-p" th:text="${text3}"></textarea>
+        </div>
     </div>
 
     <div id="footer">
