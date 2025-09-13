@@ -25,11 +25,13 @@
     align-items: center;
     justify-content: center;
 }
-#picture-wrapper > div {
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
-    background: url("/images/noelle-booth.jpg");
-    background-size: cover;
+#picture-wrapper img {
+    max-height: 100%;   /* never taller than wrapper */
+    max-width: 100%;    /* never wider than wrapper */
+    height: auto;       /* maintain aspect ratio */
+    width: auto;
+    box-shadow: #373535 4px 4px 10px 1px;
+    display: block;
 }
 #text-box-1 {
     grid-column: 1;

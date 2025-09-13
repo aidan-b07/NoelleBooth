@@ -7,14 +7,19 @@
             linear-gradient(to right, var(--primary-colour) 50%, rgba(0, 0, 0, 0))
 
 }
-#background-img {
+#img-container {
     height: 100%;
     width: auto;
-    background-image: url('/images/noelle-booth.jpg');
+}
+#background-img {
+    display: block;
+    height: 100%;
+    width: auto;
     background-position: right;
-    background-size: cover;
+    background-size: auto 100%;
     background-repeat: no-repeat;
-
+    box-shadow: #373535 4px 4px 10px 1px;
+    justify-self: end;
 }
 
 #headers {

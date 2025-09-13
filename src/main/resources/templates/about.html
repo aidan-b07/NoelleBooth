@@ -14,7 +14,7 @@
     <div id="content">
         <div th:replace="fragments :: header(${title})"></div>
         <div id="picture-wrapper" class="wrapper">
-            <div></div>
+            <img id="background-img" th:src="@{/images/noelle-booth.jpg}" alt="Noelle Booth">
         </div>
         <div id="text-box-1" class="wrapper">
             <h4 th:text="${header1}">Qualifications</h4>
