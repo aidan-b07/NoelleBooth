@@ -99,7 +99,7 @@
     background-color: var(--accent-colour);
 }
 
-#success {
+#success, #fail {
     position: fixed;
     top: 85%;
     left: 50%;
@@ -108,6 +108,9 @@
 
     animation: fadeOut 1s 3s;
     animation-fill-mode: forwards;
+}
+#fail {
+    color: #af2d2d;
 }
 
 @keyframes fadeOut {
