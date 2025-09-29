@@ -46,7 +46,7 @@ public class LoginController {
 
             return ResponseEntity.ok()
                     .header(HttpHeaders.SET_COOKIE, jwtCookie.toString())
-                    .body(authResponse.getBody());
+                    .build();
 
         } catch (HttpClientErrorException e) {
             return ResponseEntity.status(e.getStatusCode())
