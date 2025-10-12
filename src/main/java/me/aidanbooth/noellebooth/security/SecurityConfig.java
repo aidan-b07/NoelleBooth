@@ -34,8 +34,9 @@ public class SecurityConfig {
                         .requestMatchers("/h2-console/**").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.POST, "/contact").permitAll()
                     .anyRequest().authenticated())
+                .headers(headers -> headers.frameOptions(frame -> frame.disable()))
+                .exceptionHandling().accessDeniedHandler(new CustomAccessDeniedHandler());
 
-                .headers(headers -> headers.frameOptions(frame -> frame.disable()));
 
         return http.build();
     }

@@ -18,14 +18,16 @@
 
 
     <div id="headers">
-        <input id="title" class="editable-h1" type="text" placeholder="Title" th:value="${title}"></input>
-        <input id="subtitle" class="editable-h3" type="text" placeholder="Subtitle" th:value="${subtitle}"></input>
-        <textarea id="text" class="editable-p" th:text="${text}" placeholder="Text"></textarea>
-        <a href="/contact">
-            <div id="contact-btn" class="button">
-                <h4>Contact</h4>
-            </div>
-        </a>
+        <div>
+            <input id="title" class="editable-h1" type="text" placeholder="Title" th:value="${title}"></input>
+            <input id="subtitle" class="editable-h3" type="text" placeholder="Subtitle" th:value="${subtitle}"></input>
+            <textarea id="text" class="editable-p" th:text="${text}" placeholder="Text"></textarea>
+            <a href="/contact">
+                <div id="contact-btn" class="button">
+                    <h4>Contact</h4>
+                </div>
+            </a>
+        </div>
     </div>
 
     <div th:replace="~{fragments :: edit-utils}"></div>

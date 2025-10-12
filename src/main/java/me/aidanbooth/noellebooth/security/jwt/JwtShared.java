@@ -14,7 +14,6 @@ public class JwtShared {
             throw new IllegalArgumentException("JWT_AUTH_SECRET not set");
         }
 
-        System.out.println(Arrays.toString(raw.getBytes(StandardCharsets.UTF_8)));
         return Keys.hmacShaKeyFor(raw.getBytes(StandardCharsets.UTF_8));
     }
 }

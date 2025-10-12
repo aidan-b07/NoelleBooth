@@ -19,23 +19,16 @@ function initForm() {
             password: formData.get('password')
         };
 
-        console.log(payload)
-
         const response = await fetch('/api/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
         });
 
-        const data = await response.json();
         if (response.ok) {
-            // Save JWT in localStorage or cookie
-            localStorage.setItem('token', data.token);
-
-
-
-            alert('Login successful!');
+            window.location.href = "/edit/home";
         } else {
+            const data = await response.json();
             alert('Login failed: ' + data.message);
         }
     });

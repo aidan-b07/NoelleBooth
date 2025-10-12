@@ -20,7 +20,7 @@
 
 .editable-h1, .editable-h2, .editable-h3, .editable-h4, .editable-p {
     margin: 0;
-    color: var(--line-colour);
+    color: black;
     background: none;
     border: none;
 }
