@@ -1,6 +1,3 @@
-const csrfToken = document.querySelector("meta[name='csrf-token']").content;
-const csrfHeader = document.querySelector("meta[name='csrf-header']").content
-
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -54,8 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch('/edit/update-content', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
-                [csrfHeader] : csrfToken
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(dto),
         })
